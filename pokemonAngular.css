@@ -1,0 +1,43 @@
+.pokemonList{
+	float: left;
+	padding: 40px;
+	list-style: none;
+	width: 15%;	
+	height: 100vh;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.pokemonListItem{
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+	background-color: teal;
+}
+.pokemonListItemSelected{
+	background-color: orange;
+}
+.pokemonDetails{
+	float: left;
+	width: 15%;
+	padding: 10px;
+	border-style: solid;
+}
+.attributeTitle{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.earthNature{
+	color: brown;
+}
+.electricityNature{
+	color: yellow;
+	-webkit-text-stroke: 0.5px black;
+}
+.fireNature{
+	color: red;
+}
+.grassNature{
+	color:green;
+	-webkit-text-stroke: 0.5px black;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="services.js"></script>
+    <script type="text/javascript" src="pokemonangular.js"></script>
+    <link rel="stylesheet" type="text/css" href="pokemonAngular.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
+</head>
+<body ng-app="root">
+	<div ng-controller="index">
+		<ul class="pokemonList" >
+			<form><input type="text" ng-model="query" placeholder="Filter by name" autofocus></form>
+			<li ng-repeat="item in pokemonList" class="pokemonListItem" ng-click="handleComparison(item)" ng-class="{pokemonListItemSelected:item.active}">
+				{{item.pokemon.name}}
+			</li>
+		</ul>
+		<div ng-show="pokemonsToCompare" class="pokemonComparison">
+			<div ng-repeat="poke in pokemonsToCompare" class="pokemonDetails">
+				<span class="attributeTitle">Name</span>
+				<p>{{poke.name}}</p>
+				<span class="attributeTitle">Height</span>
+				<p>{{poke.height}}</p>
+				<span class="attributeTitle">Nature</span>
+				<p ng-class="natureClass(poke)">{{poke.nature}}</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
